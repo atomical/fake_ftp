@@ -91,6 +91,8 @@ module FakeFtp
               if input
                 debug("server client raw: <- #{input.inspect}")
                 respond_with(handle_request(input))
+              else
+                sleep(1)
               end
             end
             unless @client.nil?
